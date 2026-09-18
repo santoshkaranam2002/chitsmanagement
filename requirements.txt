@@ -26,3 +26,5 @@ django-cors-headers==3.14.0
 
 # --- API Docs (Swagger / OpenAPI) ---
 drf-yasg==1.21.7
+
+gunicorn

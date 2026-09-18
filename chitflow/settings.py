@@ -10,6 +10,7 @@ MongoDB server your other backends (estatecraft/hostelmanagement/
 laptoservices/spamanagement) already use (localhost:27017).
 """
 
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,11 +81,10 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'chitflow',
         'CLIENT': {
-            'host': 'mongodb+srv://chitflowadmin:chitflowadmin123@chitflowdb.xsqxwol.mongodb.net/',
+            'host': os.getenv('MONGO_URI'),
         },
     }
 }
-
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
