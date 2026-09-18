@@ -1,0 +1,18 @@
+# Virtual env
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Database
+db.sqlite3
+
+# Uploaded property photos
+media/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

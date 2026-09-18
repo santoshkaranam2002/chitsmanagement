@@ -1,0 +1,28 @@
+# ============================================
+# ChitFlow Backend - Requirements
+# Database: MongoDB via Djongo (matches the hostelmanagement/laptoservices/
+# spamanagement backends already running on your machine)
+# Works on Python 3.10 - 3.12 (MongoDB server must be running on localhost:27017)
+# ============================================
+
+# --- Core (Django 3.2 is required by Djongo) ---
+Django==3.2.23
+asgiref==3.4.1
+pytz==2024.2
+
+# --- MongoDB engine (these exact versions matter for Djongo) ---
+djongo==1.3.6
+pymongo==3.12.3
+sqlparse==0.2.4            # Djongo breaks with newer sqlparse - do not change
+
+# --- needed by drf-yasg on Python 3.12 (provides pkg_resources) ---
+setuptools==75.1.0
+
+# --- Django REST Framework ---
+djangorestframework==3.14.0
+
+# --- CORS (so the Angular frontend can call the API) ---
+django-cors-headers==3.14.0
+
+# --- API Docs (Swagger / OpenAPI) ---
+drf-yasg==1.21.7
